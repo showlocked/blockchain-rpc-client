@@ -22,6 +22,9 @@ class BtcJsonRpcClient:
             params: params
         }).json()
 
+    def get_blockchain_info(self):
+        return self.post("getblockchaininfo", [])
+
     def get_block_header(self, block_hash):
         return self.post("getblockheader", [block_hash])
 
